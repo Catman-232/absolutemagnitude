@@ -219,7 +219,7 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 		var unitSpeed = document.getElementById('unitSpeed').value; //Default 1
 		
 		//Costs Calculation
-		var scaleMod1 = (304-unitScale)/(unitScale+2468); //1 to 100 = 0.12312 to 0.07969 - Lower at Scale 100
+		var scaleMod1 = (226-unitScale)/(unitScale+1000); //1 to 100 = 0.12312 to 0.07969 - Lower at Scale 100
 		var scaleMod2 = (304+unitScale)/(unitScale+2468); //1 to 100 = 0.12393 to 0.15781 - Higher at Scale 100
 		
 		var HPCost = (((parseInt(unitHP)-1) * parseFloat(scaleMod1)) * (unitHP * parseFloat(scaleMod1))) * 0.9999;
