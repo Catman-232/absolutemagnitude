@@ -62,24 +62,17 @@ RU Cost: <input type="text" id="abilityCost" value="0" readonly></div>
 		var abilityRadius = document.getElementById('abilityRadius').value; //Default 0
 		
 		//Costs Calculation
-		var damageCost = (abilityDamage*abilityDamage)*0.16;
 		var damageMax = abilityDamage*abilityMult;
-		
-		if (abilityMult > 1)
-		{
-			var multCost = damageCost*(abilityMult-1);
-		}
-		else
-		{
-			var multCost = 0;
-		}
+		var damageCost = ((parseInt(abilityDamage)+parseInt(damageMax))/2)*10;
 		
 		var rangeCost = 0;
 		
 		var radiusCost = 0;
 		
-		var abilityCost = parseFloat(damageCost) + parseFloat(multCost) + parseFloat(rangeCost) + parseFloat(radiusCost);
+		var abilityCost = parseFloat(damageCost) + parseFloat(rangeCost) + parseFloat(radiusCost);
 		document.getElementById('abilityCost').value = abilityCost;
+		
+		document.getElementById('abilityCost').value = damageCost;
 	}
 </script>
 
