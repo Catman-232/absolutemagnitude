@@ -71,7 +71,7 @@ A 1 Dmg, 1 Mod, 1 Rng and 0 Rad attack costs 10 RU.<br /></div>
 		var damageAverage = (parseInt(abilityDamage)+parseInt(damageMax));
 		var damageCost = (damageAverage/2)*10;
 		
-		var radiusCost = damageCost*((((3*(abilityRadius+1)*((abilityRadius+1)-1)+1)-1)/10)*Math.min(abilityRadius,1));
+		var radiusCost = damageCost*((((3*(parseInt(abilityRadius)+1)*((parseInt(abilityRadius)+1)-1)+1)-1)/10)*Math.min(abilityRadius,1));
 		
 		var rangeCost = (damageCost+radiusCost)*((abilityRange/2)*Math.min(abilityRange-1,1));
 		
