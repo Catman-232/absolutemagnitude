@@ -1,4 +1,4 @@
-<html><h3>JS Absolute Magnitude - Version 0.0311</h3>
+<html><h3>JS Absolute Magnitude - Version 0.032</h3>
 
 <!-- ABILITY COST -->
 <div style="float:right;"><table>
@@ -90,9 +90,9 @@ Notes:
 <tr><th>Type:</th><th><input type="number" id="unitType"></th></tr>
 <tr><th>Class:</th><th><input type="number" id="unitClass"></th></tr>
 <tr><th>Terrains:</th><th><input type="number" id="unitTerrains"></th></tr>
-<tr><th>Width:</th><th><input type="number" id="unitWidth" value="1" onblur="checkUnitStats()"></th></tr>
+<!--<tr><th>Width:</th><th><input type="number" id="unitWidth" value="1" onblur="checkUnitStats()"></th></tr>
 <tr><th>Length:</th><th><input type="number" id="unitLength" value="1" onblur="checkUnitStats()"></th></tr>
-<tr><th>Scale:</th><th><input type="number" id="unitScale" value="1" readonly></th></tr>
+<tr><th>Scale:</th><th><input type="number" id="unitScale" value="1" readonly></th></tr>-->
 <tr><th>HP:</th><th><input type="number" id="unitHP" value="1" onblur="checkUnitStats()"></th></tr>
 <tr><th>Kinetic Armor:</th><th><input type="number" id="unitKineticArmor" value="0" onblur="checkUnitStats()"></th></tr>
 <tr><th>Energy Armor:</th><th><input type="number" id="unitEnergyArmor" value="0" onblur="checkUnitStats()"></th></tr>
@@ -118,8 +118,8 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 	function checkUnitStats()
 	{
 		//Grab 'em
-		var w = document.getElementById('unitWidth').value;
-		var l = document.getElementById('unitLength').value;
+		//var w = document.getElementById('unitWidth').value;
+		//var l = document.getElementById('unitLength').value;
 		var hp = document.getElementById('unitHP').value;
 		var s = document.getElementById('unitSpeed').value;
 		var k = document.getElementById('unitKineticArmor').value;
@@ -128,7 +128,7 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 		
 		//Check 'em
 		//Width
-		if (w < 1)
+		/*if (w < 1)
 		{
 			document.getElementById('unitWidth').value = 1;
 			w = 1;
@@ -149,7 +149,7 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 		{
 			document.getElementById('unitLength').value = 10;
 			l = 10;
-		};
+		};*/
 		
 		//HP
 		if (hp < 1)
@@ -204,7 +204,7 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 		};
 		
 		//Set Scale on this event because why not
-		document.getElementById('unitScale').value = parseInt(w) * parseInt(l);
+		//document.getElementById('unitScale').value = parseInt(w) * parseInt(l);
 	}
 
 	//Actually grabbing the stats and calculating the cost
@@ -215,10 +215,10 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 		var unitType = 0; //Being, Vehicle, Building etc
 		var unitClass = 0; //Biological, Cyborg, Mechanical, Necromantic, Eldritch etc
 		var unitTerrains = 0; //Land, Sea and Air or combinations
-		var unitWidth = document.getElementById('unitWidth').value; //Default 1
-		var unitLength = document.getElementById('unitLength').value; //Default 1
+		var unitWidth = 1;//document.getElementById('unitWidth').value; //Default 1
+		var unitLength = 1;//document.getElementById('unitLength').value; //Default 1
 		var unitScale = unitWidth*unitLength;
-		document.getElementById('unitScale').value = unitScale;
+		//document.getElementById('unitScale').value = unitScale;
 		var unitHP = document.getElementById('unitHP').value; //Default 1
 		//Armors - Total Min -30, max 270
 		var unitKineticArmor = document.getElementById('unitKineticArmor').value; //Min -30, max 90
@@ -228,8 +228,8 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 		var unitSpeed = document.getElementById('unitSpeed').value; //Default 1
 		
 		//Costs Calculation
-		var scaleMod1 = (226-unitScale)/(unitScale+1000); //1 to 100 = 0.12312 to 0.07969 - Lower at Scale 100
-		var scaleMod2 = (304+unitScale)/(unitScale+2468); //1 to 100 = 0.12393 to 0.15781 - Higher at Scale 100
+		var scaleMod1 = (226-unitScale)/(unitScale+1000); //Lower at Scale 100
+		var scaleMod2 = (304+unitScale)/(unitScale+2468); //Higher at Scale 100
 		
 		var HPCost = (((parseInt(unitHP)-1) * parseFloat(scaleMod1)) * (unitHP * parseFloat(scaleMod1))) * 0.9999;
 		
