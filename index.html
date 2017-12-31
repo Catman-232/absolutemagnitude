@@ -34,24 +34,32 @@ A 1 Dmg, 1 Mod, 1 Rng and 0 Rad attack costs 8 RU.<br /></div>
 		if (d < 1)
 		{
 			document.getElementById('abilityDamage').value = 1;
-		};
+		}
 		
 		//Multiplier
 		if (m < 1)
 		{
 			document.getElementById('abilityMult').value = 1;
-		};
+		}
 		
 		//Range
 		if (r < 1)
 		{
 			document.getElementById('abilityRange').value = 1;
 		}
+		if (r > 5)
+		{
+			document.getElementById('abilityRange').value = 5;
+		}
 		
 		//Blast Radius
 		if (b < 0)
 		{
 			document.getElementById('abilityRadius').value = 0;
+		}
+		if (b > 3)
+		{
+			document.getElementById('abilityRadius').value = 3;
 		}
 	}
 
@@ -166,29 +174,29 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 		{
 			document.getElementById('unitKineticArmor').value = -3;
 			k = -3;
-		};
+		}
 		if (k > 9)
 		{
 			document.getElementById('unitKineticArmor').value = 9;
-		};
+		}
 		
 		//Energy Armor
 		if (e < -3)
 		{
 			document.getElementById('unitEnergyArmor').value = -3;
 			e = -3;
-		};
+		}
 		if (e > 9)
 		{
 			document.getElementById('unitEnergyArmor').value = 9;
-		};
+		}
 		
 		//Magic Armor
 		if (m < -3)
 		{
 			document.getElementById('unitMagicArmor').value = -3;
 			m = -3;
-		};
+		}
 		if (m > 9)
 		{
 			document.getElementById('unitMagicArmor').value = 9;
@@ -199,7 +207,7 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 		if (a < -3)
 		{
 			document.getElementById('unitCost').value = "Armor total is too low!";
-		};
+		}
 		
 		//Set Scale on this event because why not
 		//document.getElementById('unitScale').value = parseInt(w) * parseInt(l);
