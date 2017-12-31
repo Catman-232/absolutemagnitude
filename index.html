@@ -1,13 +1,14 @@
 <html><h3>JS Absolute Magnitude - Version 0.0321</h3>
 
 <!-- ABILITY COST -->
-<div style="float:right;"><table>
-<tr><th>Ability Name:</th><th><input type="text" id="abilityName" value="Unnamed Ability" onblur="checkAbilityStats()"></th></tr>
-<tr><th>Type:</th><th><select id="damageType" onblur="checkAbilityStats()"><option>Kinetic</option><option>Energy</option><option>Magic</option></select></th></tr>
-<tr><th>Base Damage:</th><th><input type="number" id="abilityDamage" value="1" onblur="checkAbilityStats()"></th></tr>
-<tr><th>Multiplier:</th><th><input type="number" id="abilityMult" value="1" onblur="checkAbilityStats()"></th></tr>
-<tr><th>Range:</th><th><input type="number" id="abilityRange" value="1" onblur="checkAbilityStats()"></th></tr>
-<tr><th>Blast Radius:</th><th><input type="number" id="abilityRadius" value="0" onblur="checkAbilityStats()"></th></tr>
+<div style="float:right;">
+<table>
+	<tr><th>Ability Name:</th><th><input type="text" id="abilityName" value="Unnamed Ability" onblur="checkAbilityStats()"></th></tr>
+	<tr><th>Type:</th><th><select id="damageType" onblur="checkAbilityStats()"><option>Kinetic</option><option>Energy</option><option>Magic</option></select></th></tr>
+	<tr><th>Base Damage:</th><th><input type="number" id="abilityDamage" value="1" onblur="checkAbilityStats()"></th></tr>
+	<tr><th>Multiplier:</th><th><input type="number" id="abilityMult" value="1" onblur="checkAbilityStats()"></th></tr>
+	<tr><th>Range:</th><th><input type="number" id="abilityRange" value="1" onblur="checkAbilityStats()"></th></tr>
+	<tr><th>Blast Radius:</th><th><input type="number" id="abilityRadius" value="0" onblur="checkAbilityStats()"></th></tr>
 </table>
 <br />
 <button type="button" onclick="abilityCost()">Calculate</button><br />
@@ -21,8 +22,7 @@ A 1 Dmg, 1 Mod, 1 Rng and 0 Rad attack costs 10 RU.<br /></div>
 
 <script type="text/javascript">
 	//Validation
-	function checkAbilityStats()
-	{
+	function checkAbilityStats(){
 		//Grab 'em
 		var d = document.getElementById('abilityDamage').value;
 		var m = document.getElementById('abilityMult').value;
@@ -56,8 +56,7 @@ A 1 Dmg, 1 Mod, 1 Rng and 0 Rad attack costs 10 RU.<br /></div>
 	}
 
 	//Actually grabbing the stats and calculating the cost
-	function abilityCost()
-	{
+	function abilityCost(){
 		//The variables
 		var abilityName = document.getElementById('abilityName').value;
 		var damageType = document.getElementById('damageType').value;
@@ -73,7 +72,7 @@ A 1 Dmg, 1 Mod, 1 Rng and 0 Rad attack costs 10 RU.<br /></div>
 		}else{
 			var damageOutput = damageAverage;
 		}
-		var damageCost = damageOutput*10;
+		var damageCost = damageOutput*8;
 		
 		var radiusCost = damageCost*((((3*(parseInt(abilityRadius)+1)*((parseInt(abilityRadius)+1)-1)+1)-1)/10)*Math.min(abilityRadius,1));
 		
@@ -90,19 +89,20 @@ Notes:
 -->
 
 <!-- UNIT COST -->
-<div><table>
-<tr><th>Name:</th><th><input type="text" id="unitName" value="Unnamed Unit"></th></tr>
-<!--<tr><th>Type:</th><th><input type="number" id="unitType"></th></tr>
-<tr><th>Class:</th><th><input type="number" id="unitClass"></th></tr>
-<tr><th>Terrains:</th><th><input type="number" id="unitTerrains"></th></tr>
-<tr><th>Width:</th><th><input type="number" id="unitWidth" value="1" onblur="checkUnitStats()"></th></tr>
-<tr><th>Length:</th><th><input type="number" id="unitLength" value="1" onblur="checkUnitStats()"></th></tr>
-<tr><th>Scale:</th><th><input type="number" id="unitScale" value="1" readonly></th></tr>-->
-<tr><th>HP:</th><th><input type="number" id="unitHP" value="1" onblur="checkUnitStats()"></th></tr>
-<tr><th>Kinetic Armor:</th><th><input type="number" id="unitKineticArmor" value="0" onblur="checkUnitStats()"></th></tr>
-<tr><th>Energy Armor:</th><th><input type="number" id="unitEnergyArmor" value="0" onblur="checkUnitStats()"></th></tr>
-<tr><th>Magic Armor:</th><th><input type="number" id="unitMagicArmor" value="0" onblur="checkUnitStats()"></th><tr>
-<tr><th>Speed:</th><th><input type="number" id="unitSpeed" value="1"></th></tr>
+<div>
+<table>
+	<tr><th>Name:</th><th><input type="text" id="unitName" value="Unnamed Unit"></th></tr>
+	<!--<tr><th>Type:</th><th><input type="number" id="unitType"></th></tr>
+	<tr><th>Class:</th><th><input type="number" id="unitClass"></th></tr>
+	<tr><th>Terrains:</th><th><input type="number" id="unitTerrains"></th></tr>
+	<tr><th>Width:</th><th><input type="number" id="unitWidth" value="1" onblur="checkUnitStats()"></th></tr>
+	<tr><th>Length:</th><th><input type="number" id="unitLength" value="1" onblur="checkUnitStats()"></th></tr>
+	<tr><th>Scale:</th><th><input type="number" id="unitScale" value="1" readonly></th></tr>-->
+	<tr><th>HP:</th><th><input type="number" id="unitHP" value="1" onblur="checkUnitStats()"></th></tr>
+	<tr><th>Kinetic Armor:</th><th><input type="number" id="unitKineticArmor" value="0" onblur="checkUnitStats()"></th></tr>
+	<tr><th>Energy Armor:</th><th><input type="number" id="unitEnergyArmor" value="0" onblur="checkUnitStats()"></th></tr>
+	<tr><th>Magic Armor:</th><th><input type="number" id="unitMagicArmor" value="0" onblur="checkUnitStats()"></th><tr>
+	<tr><th>Speed:</th><th><input type="number" id="unitSpeed" value="1"></th></tr>
 </table>
 <br />
 <button type="button" onclick="unitCost()">Calculate</button><br />
@@ -120,8 +120,7 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 
 <script type="text/javascript">
 	//Validation
-	function checkUnitStats()
-	{
+	function checkUnitStats(){
 		//Grab 'em
 		//var w = document.getElementById('unitWidth').value;
 		//var l = document.getElementById('unitLength').value;
@@ -213,8 +212,7 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 	}
 
 	//Actually grabbing the stats and calculating the cost
-	function unitCost()
-	{
+	function unitCost(){
 		//The variables
 		var unitName = document.getElementById('unitName').value;
 		var unitType = 0; //Being, Vehicle, Building etc
