@@ -1,4 +1,4 @@
-<html><h3>JS Absolute Magnitude - Version 0.032</h3>
+<html><h3>JS Absolute Magnitude - Version 0.0321</h3>
 
 <!-- ABILITY COST -->
 <div style="float:right;"><table>
@@ -67,13 +67,18 @@ A 1 Dmg, 1 Mod, 1 Rng and 0 Rad attack costs 10 RU.<br /></div>
 		var abilityRadius = document.getElementById('abilityRadius').value; //Default 0
 		
 		//Cost Calculation
-		var damageMax = abilityDamage*abilityMult;
-		var damageAverage = (parseInt(abilityDamage)+parseInt(damageMax));
-		var damageCost = (damageAverage/2)*10;
+		var damageAverage = ((parseInt(abilityDamage)+parseInt(abilityDamage*abilityMult))/2)*0.6;
+		if(abilityMult == 1){
+			var damageOutput = abilityDamage;
+		}else{
+			var damageOutput = damageAverage;
+		}
+		var damageCost = damageOutput*10;
 		
 		var radiusCost = damageCost*((((3*(parseInt(abilityRadius)+1)*((parseInt(abilityRadius)+1)-1)+1)-1)/10)*Math.min(abilityRadius,1));
 		
-		var rangeCost = (damageCost+radiusCost)*((abilityRange/2)*Math.min(abilityRange-1,1));
+		//var rangeCost = (damageCost+radiusCost)*((abilityRange/2)*Math.min(abilityRange-1,1));
+		var rangeCost = (damageCost+radiusCost)*((((3*(parseInt(abilityRange)+1)*((parseInt(abilityRange)+1)-1)+1)-1)/10)*Math.min(abilityRange-1,1));
 		
 		var abilityCost = parseFloat(damageCost) + parseFloat(rangeCost) + parseFloat(radiusCost);
 		document.getElementById('abilityCost').value = abilityCost;
@@ -87,10 +92,10 @@ Notes:
 <!-- UNIT COST -->
 <div><table>
 <tr><th>Name:</th><th><input type="text" id="unitName" value="Unnamed Unit"></th></tr>
-<tr><th>Type:</th><th><input type="number" id="unitType"></th></tr>
+<!--<tr><th>Type:</th><th><input type="number" id="unitType"></th></tr>
 <tr><th>Class:</th><th><input type="number" id="unitClass"></th></tr>
 <tr><th>Terrains:</th><th><input type="number" id="unitTerrains"></th></tr>
-<!--<tr><th>Width:</th><th><input type="number" id="unitWidth" value="1" onblur="checkUnitStats()"></th></tr>
+<tr><th>Width:</th><th><input type="number" id="unitWidth" value="1" onblur="checkUnitStats()"></th></tr>
 <tr><th>Length:</th><th><input type="number" id="unitLength" value="1" onblur="checkUnitStats()"></th></tr>
 <tr><th>Scale:</th><th><input type="number" id="unitScale" value="1" readonly></th></tr>-->
 <tr><th>HP:</th><th><input type="number" id="unitHP" value="1" onblur="checkUnitStats()"></th></tr>
@@ -241,7 +246,7 @@ You can input decimals, but it doesn't achieve anything.<br /></div>
 		
 		if (armorTotal < -30)
 		{
-			document.getElementById('unitCost').value = "Armor Total is too low!";
+			document.getElementById('unitCost').value = "Armor total is too low!";
 		}
 		else
 		{
