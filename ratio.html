@@ -1,7 +1,7 @@
 <html>
 <body>
-Height: <input type="text" id="feet" value="6" onblur="calcRatio()" size="4">Ft. <input type="text" id="inch" value="0" onblur="calcRatio()" size="4">in. Height in Inches: <input type="text" readonly id="height" value="0" size="4"><br />
-Length: <input type="text" id="length" value="6" onblur="calcRatio()" size="4"> Ratio: <input type="text" readonly id="ratio" value="0" size="4"><br />
+Height: <input type="text" id="feet" value="5" onblur="calcRatio()" size="4">Ft. <input type="text" id="inch" value="10" onblur="calcRatio()" size="4">in. Height in Inches: <input type="text" readonly id="height" value="0" size="4"><br />
+Length: <input type="text" id="length" value="5.64" onblur="calcRatio()" size="4"> Girth (Circumference): <input type="text" id="girth" value="4.65" onblur="calcRatio()" size="4"> Height to Dick Length Ratio: <input type="text" readonly id="ratio" value="0" size="4"><br />
 <hr />
 <img src="man.png" height="576" id="talldot"><img src="dot.png" style="position: relative;" id="longdot">
 <hr />
@@ -11,6 +11,7 @@ function calcRatio()
 	feet = document.getElementById("feet").value;
 	inch = document.getElementById("inch").value;
 	length = document.getElementById("length").value;
+	girth = document.getElementById("girth").value;
 	
 	height = (parseInt(feet)*12)+parseInt(inch);
 	document.getElementById("height").value = height;
@@ -19,12 +20,14 @@ function calcRatio()
 	document.getElementById("ratio").value = ratio;
 	
 	leg = (height*8)*0.44;
-		
+	
+	diameter = girth/Math.PI;
+	
 	document.getElementById("talldot").height = height*8;
 	
 	origin = (document.getElementById("talldot").width*0.30)*-1;
 	document.getElementById("longdot").width = length*8;
-	document.getElementById("longdot").height = (length*0.262)*8;
+	document.getElementById("longdot").height = diameter*8;
 	document.getElementById("longdot").style.bottom = leg;
 	document.getElementById("longdot").style.left = origin;
 }
