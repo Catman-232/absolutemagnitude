@@ -1,0 +1,30 @@
+<html>
+<body>
+Height: <input type="text" id="feet" value="0" onblur="calcRatio()" size="4">Ft. <input type="text" id="inch" value="0" onblur="calcRatio()" size="4">in. Height in Inches: <input type="text" readonly id="height" value="0" size="4"><br />
+Length: <input type="text" id="length" value="0" onblur="calcRatio()" size="4"> Ratio: <input type="text" readonly id="ratio" value="0" size="4"><br />
+<hr />
+<img src="dot.png" width="4" id="talldot"><img src="dot.png" style="position: relative;" id="longdot">
+<hr />
+<script>
+function calcRatio()
+{
+	feet = document.getElementById("feet").value;
+	inch = document.getElementById("inch").value;
+	length = document.getElementById("length").value;
+	
+	height = (parseInt(feet)*12)+parseInt(inch);
+	document.getElementById("height").value = height;
+	
+	ratio = height/length;
+	document.getElementById("ratio").value = ratio;
+	
+	leg = (height*8)*0.45;
+	
+	document.getElementById("talldot").height = height*8;
+	document.getElementById("longdot").width = length*8;
+	document.getElementById("longdot").height = (length*0.262)*8;
+	document.getElementById("longdot").style.bottom = leg;
+}
+</script>
+</body>
+</html>
