@@ -1,15 +1,17 @@
 <html>
 <body onload="calcRatio()">Left<br/>
-Height: <input type="text" id="feet" value="5" onblur="calcRatio()" size="4">Ft. <input type="text" id="inch" value="10" onblur="calcRatio()" size="4">in. Height in Inches: <input type="text" readonly id="height" value="0" size="4"><br />
+Height: <input type="text" id="feet" value="5" onblur="calcRatio()" size="4">Ft. <input type="text" id="inch" value="9" onblur="calcRatio()" size="4">in. Height in Inches: <input type="text" readonly id="height" value="0" size="4"><br />
+Percentages of total height - Head: <input type="text" id="headpercent" value="14.333" placeholder="14.333" onblur="calcRatio()" size="4">%. Body: <input type="text" id="bodypercent" value="41.408" placeholder="41.408" onblur="calcRatio()" size="4">%. Legs: <input type="text" id="legspercent" value="44.259" placeholder="44.259" onblur="calcRatio()" size="4">%. Total: <input type="text" readonly id="totalpercent" value="100" size="4">%.<br />
 Length: <input type="text" id="length" value="5.64" onblur="calcRatio()" size="4"> Girth (Circumference): <input type="text" id="girth" value="4.65" onblur="calcRatio()" size="4"> Height to Dick Length Ratio: <input type="text" readonly id="ratio" value="0" size="4"><br />
 <hr />
 Right<br/>
-Height: <input type="text" id="feet2" value="5" onblur="calcRatio()" size="4">Ft. <input type="text" id="inch2" value="10" onblur="calcRatio()" size="4">in. Height in Inches: <input type="text" readonly id="height2" value="0" size="4"><br />
+Height: <input type="text" id="feet2" value="5" onblur="calcRatio()" size="4">Ft. <input type="text" id="inch2" value="9" onblur="calcRatio()" size="4">in. Height in Inches: <input type="text" readonly id="height2" value="0" size="4"><br />
+Percentages of total height - Head: <input type="text" id="headpercent2" value="14.333" placeholder="14.333" onblur="calcRatio()" size="4">%. Body: <input type="text" id="bodypercent2" value="41.408" placeholder="41.408" onblur="calcRatio()" size="4">%. Legs: <input type="text" id="legspercent2" value="44.259" placeholder="44.259" onblur="calcRatio()" size="4">%. Total: <input type="text" readonly id="totalpercent2" value="100" size="4">%.<br />
 Length: <input type="text" id="length2" value="5.64" onblur="calcRatio()" size="4"> Girth (Circumference): <input type="text" id="girth2" value="4.65" onblur="calcRatio()" size="4"> Height to Dick Length Ratio: <input type="text" readonly id="ratio2" value="0" size="4"><br />
-<hr />
+<hr />Lalafell Percentages (Estimated) - Head: 21.839%. Body: 37.932%. Legs: 40.229%.
 <div style="position:fixed; bottom:0; z-index:-1;">
-<div style="display:inline;"><img src="man.png" height="576" id="talldot"><img src="dot.png" style="position:relative; z-index:1;" id="longdot"></div>
-<div style="display:inline; position:fixed; bottom:0; left:170px;"><img src="man.png" height="576" id="talldot2"><img src="dot.png" style="position:relative;" id="longdot2"></div>
+<div style="display:inline;"><img src="head.png" height="82.08" id="head"><br /><img src="body.png" height="237.12" id="body"><br /><img src="legs.png" height="253.44" id="legs"><img src="dot.png" style="position:relative; z-index:1;" id="longdot"></div>
+<div style="display:inline; position:fixed; bottom:0; left:170px;"><img src="head.png" height="82.08" id="head2"><br /><img src="body.png" height="237.12" id="body2"><br /><img src="legs.png" height="253.44" id="legs2"><img src="dot.png" style="position:relative;" id="longdot2"></div>
 </div>
 <script>
 function calcRatio()
@@ -17,49 +19,73 @@ function calcRatio()
 	//left
 	feet = document.getElementById("feet").value;
 	inch = document.getElementById("inch").value;
+	headpercent = parseFloat(document.getElementById("headpercent").value);
+	bodypercent = parseFloat(document.getElementById("bodypercent").value);
+	legspercent = parseFloat(document.getElementById("legspercent").value);
 	length = document.getElementById("length").value;
 	girth = document.getElementById("girth").value;
 	
-	height = (parseInt(feet)*12)+parseInt(inch);
+	height = (parseInt(feet)*12)+parseFloat(inch);
 	document.getElementById("height").value = height;
 	
 	ratio = height/length;
 	document.getElementById("ratio").value = ratio;
 	
-	leg = (height*8)*0.44;
+	document.getElementById("totalpercent").value = parseFloat(headpercent) + parseFloat(bodypercent) + parseFloat(legspercent);
+	
+	head = parseFloat(height*(parseFloat(headpercent)/100));
+	body = parseFloat(height*(parseFloat(bodypercent)/100));
+	leg = parseFloat(height*(parseFloat(legspercent)/100));
 	
 	diameter = girth/Math.PI;
 	
-	document.getElementById("talldot").height = height*8;
+	document.getElementById("head").height = parseFloat(head*8);
+	document.getElementById("body").height = parseFloat(body*8);
+	document.getElementById("legs").height = parseFloat(leg*8);
 	
-	origin = (document.getElementById("talldot").width*0.30)*-1;
+	document.getElementById("body").width = document.getElementById("head").width;
+	document.getElementById("legs").width = document.getElementById("head").width;
+	
+	origin = (document.getElementById("legs").width*0.30)*-1;
 	document.getElementById("longdot").width = length*8;
 	document.getElementById("longdot").height = diameter*8;
-	document.getElementById("longdot").style.bottom = leg;
+	document.getElementById("longdot").style.bottom = leg*8;
 	document.getElementById("longdot").style.left = origin;
 	
-	//right
+	//left
 	feet2 = document.getElementById("feet2").value;
 	inch2 = document.getElementById("inch2").value;
+	headpercent2 = parseFloat(document.getElementById("headpercent2").value);
+	bodypercent2 = parseFloat(document.getElementById("bodypercent2").value);
+	legspercent2 = parseFloat(document.getElementById("legspercent2").value);
 	length2 = document.getElementById("length2").value;
 	girth2 = document.getElementById("girth2").value;
 	
-	height2 = (parseInt(feet2)*12)+parseInt(inch2);
-	document.getElementById("height2").value = height;
+	height2 = (parseInt(feet2)*12)+parseFloat(inch2);
+	document.getElementById("height2").value = height2;
 	
 	ratio2 = height2/length2;
 	document.getElementById("ratio2").value = ratio2;
 	
-	leg2 = (height2*8)*0.44;
+	document.getElementById("totalpercent2").value = parseFloat(headpercent2) + parseFloat(bodypercent2) + parseFloat(legspercent2);
+	
+	head2 = parseFloat(height2*(parseFloat(headpercent2)/100));
+	body2 = parseFloat(height2*(parseFloat(bodypercent2)/100));
+	leg2 = parseFloat(height2*(parseFloat(legspercent2)/100));
 	
 	diameter2 = girth2/Math.PI;
 	
-	document.getElementById("talldot2").height = height2*8;
+	document.getElementById("head2").height = parseFloat(head2*8);
+	document.getElementById("body2").height = parseFloat(body2*8);
+	document.getElementById("legs2").height = parseFloat(leg2*8);
 	
-	origin2 = (document.getElementById("talldot2").width*0.30)*-1;
+	document.getElementById("body2").width = document.getElementById("head2").width;
+	document.getElementById("legs2").width = document.getElementById("head2").width;
+	
+	origin2 = (document.getElementById("legs2").width*0.30)*-1;
 	document.getElementById("longdot2").width = length2*8;
 	document.getElementById("longdot2").height = diameter2*8;
-	document.getElementById("longdot2").style.bottom = leg2;
+	document.getElementById("longdot2").style.bottom = leg2*8;
 	document.getElementById("longdot2").style.left = origin2;
 }
 </script>
