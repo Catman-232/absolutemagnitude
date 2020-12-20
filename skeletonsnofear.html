@@ -55,10 +55,10 @@ function skeletonfight()
 		skeletonsleftfighting -= Math.min(8, skeletonsleftfighting);
 		allskeletons -= Math.min(8, skeletonsleftfighting);
 		}
-		else if (skeletonsleftfighting <8)
+		else if (skeletonsleftfighting < 8)
 		{
-			skeletonsleftscared -= (Math.min(8,skeletonsleftscared)-skeletonsleftfighting);
-			allskeletons -= (Math.min(8,skeletonsleftscared)-skeletonsleftfighting);
+			skeletonsleftscared -= (Math.min(8, skeletonsleftscared) - skeletonsleftfighting);
+			allskeletons -= (Math.min(8, skeletonsleftscared) - skeletonsleftfighting);
 			skeletonsleftfighting = 0;
 		}
 		
@@ -80,7 +80,7 @@ function skeletonfight()
 	}
 	
 	//Fighting back
-	function thefight(fighters,badfighters)
+	function thefight(fighters, badfighters)
 	{
 		document.getElementById("meme").innerHTML += "The skeletons attempt their attacks: ";
 		
@@ -101,7 +101,7 @@ function skeletonfight()
 		}
 		for(i = 0; i < badfighters; i++)
 		{
-			attackroll = Math.min(Math.floor((Math.random() * 20) + 1),Math.floor((Math.random() * 20) + 1)) + 4;
+			attackroll = Math.min(Math.floor((Math.random() * 20) + 1), Math.floor((Math.random() * 20) + 1)) + 4;
 			if (attackroll == 24)
 			{
 				damagethisattack = Math.floor((Math.random() * 6) + 1) + Math.floor((Math.random() * 6) + 1) + 2;
@@ -190,7 +190,7 @@ function skeletonfight()
 		}
 		if(allskeletons > 0)
 		{
-			thefight(skeletonsleftfighting,skeletonsleftscared);
+			thefight(skeletonsleftfighting, skeletonsleftscared);
 		}
 		if(skeletonsleftscared > 0 && tarrasquehp > 0)
 		{
