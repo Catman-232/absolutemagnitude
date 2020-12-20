@@ -53,13 +53,12 @@ function skeletonfight()
 		}
 		for (i = 0; i < 8; i++)
 		{
-			if ((tarrasque[i]) > 1)
+			if ((tarrasquerolls[i]) > 1)
 			{
 				kills++;
 			}
 		}
 		
-		killedthisturn = Math.min(kills, allskeletons);
 		dead += Math.min(kills, allskeletons);
 		
 		if (skeletonsleftfighting >= 8)
@@ -76,7 +75,7 @@ function skeletonfight()
 		
 		if(allskeletons > 0)
 		{
-			document.getElementById("meme").innerHTML += "The Tarrasque kills 8 non-trembling skeletons! There are " + allskeletons + " left!<br /><br />";
+			document.getElementById("meme").innerHTML += "The Tarrasque kills " + kills + " skeletons! There are " + allskeletons + " left!<br /><br />";
 		}
 		else if(allskeletons == 0)
 		{
@@ -86,7 +85,7 @@ function skeletonfight()
 			}
 			else
 			{
-				document.getElementById("meme").innerHTML += "The Tarrasque kills the remaining " + killedthisturn + " skeletons!<br /><br />";
+				document.getElementById("meme").innerHTML += "The Tarrasque kills the remaining " + kills + " skeletons!<br /><br />";
 			}
 		}
 	}
