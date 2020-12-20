@@ -90,7 +90,7 @@ function skeletonfight()
 			attackroll = Math.floor((Math.random() * 20) + 1) + 4;
 			if (attackroll == 24)
 			{
-				damagethisattack = 6 + Math.floor((Math.random() * 6) + 1) + 2;
+				damagethisattack = Math.floor((Math.random() * 6) + 1) + Math.floor((Math.random() * 6) + 1) + 2;
 				document.getElementById("meme").innerHTML += "<b>" + damagethisattack + "!!</b> ";
 				damagethisturn += damagethisattack;
 			}
@@ -104,7 +104,7 @@ function skeletonfight()
 			attackroll = Math.min(Math.floor((Math.random() * 20) + 1),Math.floor((Math.random() * 20) + 1)) + 4;
 			if (attackroll == 24)
 			{
-				damagethisattack = 6 + Math.floor((Math.random() * 6) + 1) + 2;
+				damagethisattack = Math.floor((Math.random() * 6) + 1) + Math.floor((Math.random() * 6) + 1) + 2;
 				document.getElementById("meme").innerHTML += "<b>" + damagethisattack + "!!</b> ";
 				damagethisturn += damagethisattack;
 			}
