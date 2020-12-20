@@ -11,6 +11,7 @@ function skeletonfight()
 	var skeletonsleftscared = 0;
 	var mod = -1;
 	var skeletonrolls = [];
+	var tarrasquerolls = [];
 	var success = 0;
 	var fails = 0;
 	var dead = 0;
@@ -42,21 +43,34 @@ function skeletonfight()
 		skeletonsleftscared = fails;
 	}
 	
-	//Tarrasque attacks and kills eight skeletons that are not feared
+	//Tarrasque attacks and kills eight skeletons focusing on the unfeared ones
 	function tarrasqueattack()
 	{
-		killedthisturn = Math.min(8, allskeletons);
-		dead += Math.min(8, allskeletons);
-		
-		if (skeletonsleftfighting > 8)
+		kills = 0;
+		for (i = 0; i < 8; i++)
 		{
-		skeletonsleftfighting -= Math.min(8, skeletonsleftfighting);
-		allskeletons -= Math.min(8, skeletonsleftfighting);
+			tarrasquerolls[i] = Math.floor((Math.random() * 20) + 1);
+		}
+		for (i = 0; i < 8; i++)
+		{
+			if ((tarrasque[i]) > 1)
+			{
+				kills++;
+			}
+		}
+		
+		killedthisturn = Math.min(kills, allskeletons);
+		dead += Math.min(kills, allskeletons);
+		
+		if (skeletonsleftfighting >= 8)
+		{
+		skeletonsleftfighting -= Math.min(kills, skeletonsleftfighting);
+		allskeletons -= Math.min(kills, skeletonsleftfighting);
 		}
 		else if (skeletonsleftfighting < 8)
 		{
-			skeletonsleftscared -= (Math.min(8, skeletonsleftscared) - skeletonsleftfighting);
-			allskeletons -= (Math.min(8, skeletonsleftscared) - skeletonsleftfighting);
+			skeletonsleftscared -= (Math.min(kills, skeletonsleftscared) - skeletonsleftfighting);
+			allskeletons -= (Math.min(kills, skeletonsleftscared) - skeletonsleftfighting);
 			skeletonsleftfighting = 0;
 		}
 		
