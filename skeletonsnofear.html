@@ -149,7 +149,7 @@ function skeletonfight()
 		}
 		skeletonsleftfighting += success;
 		skeletonsleftscared -= success;
-		document.getElementById("meme").innerHTML += "<br />" + success + " skeletons become immune to the spook and can now fight! Fighting: " + skeletonsleftfighting + ", Spooked: " + skeletonsleftscared + ", Dead: " + dead + ".<br /><br />";
+		document.getElementById("meme").innerHTML += "<br />" + success + " skeletons become immune to the spook! Fighting: " + skeletonsleftfighting + ", Spooked: " + skeletonsleftscared + ", Dead: " + dead + ".<br /><br />";
 	}
 	
 	//The effect ends after a minute, after ten turns
@@ -157,7 +157,7 @@ function skeletonfight()
 	{
 		skeletonsleftfighting += skeletonsleftscared;
 		skeletonsleftscared = 0;
-		document.getElementById("meme").innerHTML += "The fear effect wears off and all spooked skeletons are now able to fight! Fighting: " + skeletonsleftfighting + ", Dead: " + dead + ".<br /><br />";
+		document.getElementById("meme").innerHTML += "The fear effect wears off! Fighting: " + skeletonsleftfighting + ", Dead: " + dead + ".<br /><br />";
 	}
 	
 	//Who won?
