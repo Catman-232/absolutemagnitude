@@ -1,0 +1,184 @@
+<body>
+Skeleton Count: <input type="text" id="amount" value="200"><input type="button" value="Go!" onclick="skeletonfight()">
+<div id="meme"></div>
+<script>
+function skeletonfight()
+{
+	document.getElementById("meme").innerHTML = "";
+	var startskeletons = document.getElementById("amount").value;
+	var skeletonsleftfighting = document.getElementById("amount").value;
+	var skeletonsleftscared = 0;
+	var mod = -1;
+	var skeletonrolls = [];
+	var success = 0;
+	var fails = 0;
+	var dead = 0;
+	var tarrasquehp = 676;
+
+	document.getElementById("meme").innerHTML += "<br />The Tarrasque has " + tarrasquehp + "HP!<br /><br />";
+	
+	//Save rolls
+	function startsaverolls(skeletons)
+	{
+		document.getElementById("meme").innerHTML += "The skeletons try not to get spooked: ";
+		for (i = 0; i < skeletons; i++)
+		{
+			skeletonrolls[i] = Math.floor((Math.random() * 20) + 1);
+		}
+		for (i = 0; i < skeletons; i++)
+		{
+			if ((skeletonrolls[i]-1) >= 17)
+			{
+				document.getElementById("meme").innerHTML += "<b>" + (skeletonrolls[i] + mod) + "</b>" + ", ";
+				success++;
+			}
+			else
+			{
+				document.getElementById("meme").innerHTML += (skeletonrolls[i] + mod) + ", ";
+				fails++;
+			}
+		}
+		document.getElementById("meme").innerHTML += "<br />" + success + " skeletons are not afraid of anything. But " + fails + " are spooked for the time being.<br /><br />";
+		skeletonsleftfighting = success;
+		skeletonsleftscared = fails;
+	}
+	
+	//Tarrasque attacks and kills eight skeletons that are not feared
+	function tarrasqueattack()
+	{
+		killedthisturn = Math.min(8, skeletonsleftfighting);
+		dead += Math.min(8, skeletonsleftfighting);
+		skeletonsleftfighting -= Math.min(8, skeletonsleftfighting);
+		
+		if(skeletonsleftfighting > 0)
+		{
+			if(skeletonsleftscared > 0)
+			{
+				document.getElementById("meme").innerHTML += "The Tarrasque kills 8 skeletons that aren't spooked! There are " + skeletonsleftfighting + " still fighting!<br /><br />";
+			}
+			else if(skeletonsleftscared == 0)
+			{
+				document.getElementById("meme").innerHTML += "The Tarrasque kills 8 skeletons! There are " + skeletonsleftfighting + " still fighting!<br /><br />";
+			}
+		}
+		else if(skeletonsleftfighting == 0)
+		{
+			document.getElementById("meme").innerHTML += "The Tarrasque kills the remaining " + killedthisturn + " skeletons!<br /><br />";
+		}
+	}
+	
+	//Fighting back
+	function thefight(fighters)
+	{
+		if(skeletonsleftscared > 0)
+		{
+			document.getElementById("meme").innerHTML += "The skeletons that aren't spooked attempt their attacks: ";
+		}else if(skeletonsleftscared == 0)
+		{
+			document.getElementById("meme").innerHTML += "The fearless skeletons attempt their attacks: ";
+		}
+		
+		damagethisturn = 0;
+		for(i = 0; i < fighters; i++)
+		{
+			attackroll = Math.floor((Math.random() * 20) + 1) + 4;
+			if (attackroll == 24)
+			{
+				damagethisattack = 6 + Math.floor((Math.random() * 6) + 1) + 2;
+				document.getElementById("meme").innerHTML += "<b>" + damagethisattack + "!!</b> ";
+				damagethisturn += damagethisattack;
+			}
+			else
+			{
+				document.getElementById("meme").innerHTML += "Miss! ";
+			}
+		}
+		tarrasquehp -= Math.min(damagethisturn, tarrasquehp);
+		if(tarrasquehp > 0)
+		{
+			document.getElementById("meme").innerHTML += "<br />The Tarrasque took " + damagethisturn + " damage! It is on " +tarrasquehp +"HP!<br /><br />";
+		}
+		else if(tarrasquehp == 0)
+		{
+			document.getElementById("meme").innerHTML += "<br />The Tarrasque took " + damagethisturn + " damage! It is now dead!<br /><br />";
+		}
+	}
+	
+	//Skeletons roll to break out of fear
+	function repeatsaverolls(skeletons)
+	{
+		document.getElementById("meme").innerHTML += "The skeletons that were spooked attempt to stop being spooked: ";
+		success = 0;
+		fails = 0;
+		for (i = 0; i < skeletons; i++)
+		{
+			skeletonrolls[i] = Math.floor((Math.random() * 20) + 1);
+		}
+		for (i = 0; i < skeletons; i++)
+		{
+			if ((skeletonrolls[i]-1) >= 17)
+			{
+				document.getElementById("meme").innerHTML += "<b>" + (skeletonrolls[i] + mod) + "</b>" + ", ";
+				success++;
+			}
+			else
+			{
+				document.getElementById("meme").innerHTML += (skeletonrolls[i] + mod) + ", ";
+				fails++;
+			}
+		}
+		skeletonsleftfighting += success;
+		skeletonsleftscared -= success;
+		document.getElementById("meme").innerHTML += "<br />" + success + " skeletons become immune to the spook and can now fight! Fighting: " + skeletonsleftfighting + ", Spooked: " + skeletonsleftscared + ", Dead: " + dead + ".<br /><br />";
+	}
+	
+	//The effect ends after a minute, after ten turns
+	function feareffectends()
+	{
+		skeletonsleftfighting += skeletonsleftscared;
+		skeletonsleftscared = 0;
+		document.getElementById("meme").innerHTML += "The fear effect wears off and all spooked skeletons are now able to fight! Fighting: " + skeletonsleftfighting + ", Dead: " + dead + ".<br /><br />";
+	}
+	
+	//Who won?
+	function awinnerisyou()
+	{
+		if(dead >= startskeletons)
+		{
+			document.getElementById("meme").innerHTML += "<b>The Tarrasque is victorious! It survived on " + tarrasquehp + "HP!";
+		}
+		if(tarrasquehp <= 0)
+		{
+			document.getElementById("meme").innerHTML += "<b>The skeletons defeated the Tarrasque! There were " + (startskeletons - dead) + " left alive!";
+		}
+	}
+
+	//the actual thing
+	turn = 1;
+	document.getElementById("meme").innerHTML += "Turn " + turn + "<br />";
+	startsaverolls(startskeletons);
+	while(dead < startskeletons && tarrasquehp > 0)
+	{
+		if(turn != 1)
+		{
+			document.getElementById("meme").innerHTML += "Turn " + turn + "<br />";
+		}
+		tarrasqueattack();
+		if(turn == 11)
+		{
+			feareffectends();
+		}
+		if(skeletonsleftfighting > 0)
+		{
+			thefight(skeletonsleftfighting);
+		}
+		if(skeletonsleftscared > 0 && tarrasquehp > 0)
+		{
+			repeatsaverolls(skeletonsleftscared);
+		}
+		turn++;
+		awinnerisyou();
+	}
+}
+</script>
+</body>
