@@ -30,12 +30,10 @@ function skeletonfight()
 		{
 			if ((skeletonrolls[i]-1) >= 17)
 			{
-				document.getElementById("meme").innerHTML += "<b>" + (skeletonrolls[i] + mod) + "</b>" + ", ";
 				success++;
 			}
 			else
 			{
-				document.getElementById("meme").innerHTML += (skeletonrolls[i] + mod) + ", ";
 				fails++;
 			}
 		}
@@ -85,6 +83,7 @@ function skeletonfight()
 		document.getElementById("meme").innerHTML += "The skeletons attempt their attacks: ";
 		
 		damagethisturn = 0;
+		misses = 0;
 		for(i = 0; i < fighters; i++)
 		{
 			attackroll = Math.floor((Math.random() * 20) + 1) + 4;
@@ -96,7 +95,7 @@ function skeletonfight()
 			}
 			else
 			{
-				document.getElementById("meme").innerHTML += "Miss! ";
+				misses++;
 			}
 		}
 		for(i = 0; i < badfighters; i++)
@@ -105,14 +104,15 @@ function skeletonfight()
 			if (attackroll == 24)
 			{
 				damagethisattack = Math.floor((Math.random() * 6) + 1) + Math.floor((Math.random() * 6) + 1) + 2;
-				document.getElementById("meme").innerHTML += "<b>" + damagethisattack + "!!</b> ";
+				document.getElementById("meme").innerHTML += damagethisattack + "! ";
 				damagethisturn += damagethisattack;
 			}
 			else
 			{
-				document.getElementById("meme").innerHTML += "Miss! ";
+				misses++;
 			}
 		}
+		document.getElementById("meme").innerHTML += "<b>" + misses + " misses!</b> ";
 		tarrasquehp -= Math.min(damagethisturn, tarrasquehp);
 		if(tarrasquehp > 0)
 		{
@@ -138,12 +138,10 @@ function skeletonfight()
 		{
 			if ((skeletonrolls[i]-1) >= 17)
 			{
-				document.getElementById("meme").innerHTML += "<b>" + (skeletonrolls[i] + mod) + "</b>" + ", ";
 				success++;
 			}
 			else
 			{
-				document.getElementById("meme").innerHTML += (skeletonrolls[i] + mod) + ", ";
 				fails++;
 			}
 		}
