@@ -62,6 +62,7 @@ function skeletonfight()
 		kills = Math.min(kills, allskeletons);
 		dead += kills;
 		
+		overflowkills = 0;
 		if(skeletonsleftfighting < kills)
 		{
 			overflowkills = kills - skeletonsleftfighting;
