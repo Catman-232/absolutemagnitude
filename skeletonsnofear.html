@@ -62,18 +62,20 @@ function skeletonfight()
 		kills = Math.min(kills, allskeletons);
 		dead += kills;
 		
-		if (skeletonsleftfighting > kills)
-		{
-		skeletonsleftfighting -= kills;
-		allskeletons -= kills;
-		}
-		else if (skeletonsleftfighting <= kills)
+		if(skeletonsleftfighting < kills)
 		{
 			overflowkills = kills - skeletonsleftfighting;
-			skeletonsleftfighting -= Math.min(kills, skeletonsleftfighting);
-			skeletonsleftscared -= Math.min(overflowkills, skeletonsleftscared);
-			allskeletons -= Math.min(kills, allskeletons);
 		}
+		
+		skeletonsleftfighting -= Math.min(kills, skeletonsleftfighting);
+		
+		if(skeletonsleftscared > 0)
+		{
+			skeletonsleftscared -= Math.min(overflowkills, skeletonsleftscared);
+		}
+		
+		allskeletons -= Math.min(kills, allskeletons);
+		
 		
 		if(allskeletons > kills)
 		{
@@ -95,7 +97,7 @@ function skeletonfight()
 	//Fighting back
 	function thefight(fighters, badfighters)
 	{
-		document.getElementById("meme").innerHTML += "The skeletons attempt their attacks: ";
+		document.getElementById("meme").innerHTML += "The " + allskeletons + " skeletons attempt their attacks: ";
 		
 		damagethisturn = 0;
 		misses = 0;
@@ -176,13 +178,13 @@ function skeletonfight()
 	//Who won?
 	function awinnerisyou()
 	{
-		if(dead >= startskeletons)
+		if(allskeletons == 0)
 		{
 			document.getElementById("meme").innerHTML += "<b>The Tarrasque is victorious! It survived on " + tarrasquehp + "HP!";
 		}
 		if(tarrasquehp <= 0)
 		{
-			document.getElementById("meme").innerHTML += "<b>The skeletons defeated the Tarrasque! There were " + (startskeletons - dead) + " left alive!";
+			document.getElementById("meme").innerHTML += "<b>The skeletons defeated the Tarrasque! There were " + allskeletons + " left alive!";
 		}
 	}
 
@@ -190,7 +192,7 @@ function skeletonfight()
 	turn = 1;
 	document.getElementById("meme").innerHTML += "Turn " + turn + "<br />";
 	startsaverolls(startskeletons);
-	while(dead < startskeletons && tarrasquehp > 0)
+	while(allskeletons > 0 && tarrasquehp > 0)
 	{
 		if(turn != 1)
 		{
