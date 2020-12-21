@@ -59,27 +59,29 @@ function skeletonfight()
 			}
 		}
 		
-		dead += Math.min(kills, allskeletons);
+		kills = Math.min(kills, allskeletons);
+		dead += kills;
 		
-		if (skeletonsleftfighting >= 8)
+		if (skeletonsleftfighting > kills)
 		{
-		skeletonsleftfighting -= Math.min(kills, skeletonsleftfighting);
-		allskeletons -= Math.min(kills, skeletonsleftfighting);
+		skeletonsleftfighting -= kills;
+		allskeletons -= kills;
 		}
-		else if (skeletonsleftfighting < 8)
+		else if (skeletonsleftfighting <= kills)
 		{
-			skeletonsleftscared -= (Math.min(kills, skeletonsleftscared) - skeletonsleftfighting);
-			allskeletons -= (Math.min(kills, skeletonsleftscared) - skeletonsleftfighting);
-			skeletonsleftfighting = 0;
+			overflowkills = kills - skeletonsleftfighting;
+			skeletonsleftfighting -= Math.min(kills, skeletonsleftfighting);
+			skeletonsleftscared -= Math.min(overflowkills, skeletonsleftscared;
+			allskeletons -= Math.min(kills, allskeletons);
 		}
 		
-		if(allskeletons > 0)
+		if(allskeletons > kills)
 		{
 			document.getElementById("meme").innerHTML += "The Tarrasque kills " + kills + " skeletons! There are " + allskeletons + " left!<br /><br />";
 		}
-		else if(allskeletons == 0)
+		else if(allskeletons <= kills)
 		{
-			if (killedthisturn == 1)
+			if (kills == 1)
 			{
 				document.getElementById("meme").innerHTML += "The Tarrasque kills the final skeleton!<br /><br />";
 			}
@@ -125,7 +127,7 @@ function skeletonfight()
 				misses++;
 			}
 		}
-		document.getElementById("meme").innerHTML += "<b>" + misses + " misses!</b> ";
+		document.getElementById("meme").innerHTML += "<b>(" + misses + " misses!)</b> ";
 		tarrasquehp -= Math.min(damagethisturn, tarrasquehp);
 		if(tarrasquehp > 0)
 		{
