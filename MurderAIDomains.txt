@@ -1,7 +1,6 @@
 ! Title: laylavish/uBlockOrigin-HUGE-AI-Blocklist edit by Catman
 ! Homepage: https://raw.githubusercontent.com/Catman-232/absolutemagnitude/master/MurderAIDomains.txt
 ! Sites that have .ai domain extension
-! Sites that have .ai domain extension
 google.*##div[data-lpage*="animegenius.ai"]:remove()
 google.*##div[data-lpage*="artvy.ai"]:remove()
 google.*##div[data-lpage*="davy.ai"]:remove()
