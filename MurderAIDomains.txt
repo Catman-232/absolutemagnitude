@@ -1,3 +1,5 @@
+! Title: Murder AI Domains Attempt by Catman
+! Homepage: https://raw.githubusercontent.com/Catman-232/absolutemagnitude/master/MurderAIDomains.txt
 * animegenius.ai * block
 * artvy.ai * block
 * davy.ai * block
