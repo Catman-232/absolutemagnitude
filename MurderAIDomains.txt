@@ -308,6 +308,7 @@ google.*##div[data-lpage*="undetectable.ai"]:remove()
 
 
 ! Sites that have .com domain extension
+google.*##div[data-lpage*="anime-girl.com"]:remove()
 google.*##div[data-lpage*="hayo.com"]:remove()
 google.*##div[data-lpage*="yodayo.com"]:remove()
 google.*##div[data-lpage*="stable-diffusion-art.com"]:remove()
