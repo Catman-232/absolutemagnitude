@@ -1,4 +1,4 @@
-! Title: Murder AI Domains Attempt by Catman
+! Title: laylavish/uBlockOrigin-HUGE-AI-Blocklist edit by Catman
 ! Homepage: https://raw.githubusercontent.com/Catman-232/absolutemagnitude/master/MurderAIDomains.txt
 ! Sites that have .ai domain extension
 google.*##a[href*="animegenius.ai"]:upward(2):remove()
