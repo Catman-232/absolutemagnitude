@@ -304,6 +304,7 @@ google.*##div[data-lpage*="urania.ai"]:remove()
 google.*##div[data-lpage*="pipio.ai"]:remove()
 google.*##div[data-lpage*="everart.ai"]:remove()
 google.*##div[data-lpage*="undetectable.ai"]:remove()
+google.*##div[data-lpage*="facecam.ai"]:remove()
 
 
 ! Sites that have .com domain extension
@@ -542,6 +543,7 @@ google.*##div[data-lpage*="cozybrushery.com"]:remove()
 google.*##div[data-lpage*="story.com"]:remove()
 google.*##div[data-lpage*="copilot.microsoft.com"]:remove()
 google.*##div[data-lpage*="copilot.github.com"]:remove()
+google.*##div[data-lpage*="pixabay.com"]:remove()
 
 
 ! Sites that have .art domain extension
@@ -676,7 +678,7 @@ google.*##div[data-lpage*="novelai.net"]:remove()
 google.*##div[data-lpage*="miramuseai.net"]:remove()
 google.*##div[data-lpage*="aichatting.net"]:remove()
 google.*##div[data-lpage*="melodystudio.net"]:remove()
-
+google.*##div[data-lpage*="trycatchdebug.net"]:remove()
 
 ! Sites that have miscellaneous domain extensions (eg. .pub, io, etc.)
 google.*##div[data-lpage*="aitree.io"]:remove()
