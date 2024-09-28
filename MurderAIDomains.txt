@@ -1,5 +1,6 @@
 ! Title: laylavish/uBlockOrigin-HUGE-AI-Blocklist edit by Catman
 ! Homepage: https://raw.githubusercontent.com/Catman-232/absolutemagnitude/master/MurderAIDomains.txt
+
 ! Sites that have .ai domain extension
 google.*##div[data-lpage*="animegenius.ai"]:remove()
 google.*##div[data-lpage*="artvy.ai"]:remove()
@@ -36,7 +37,6 @@ google.*##div[data-lpage*="holara.ai"]:remove()
 google.*##div[data-lpage*="voicebot.ai"]:remove()
 google.*##div[data-lpage*="pokeit.ai"]:remove()
 google.*##div[data-lpage*="hotpot.ai"]:remove()
-google.*##div[data-lpage*="pokeit.ai"]:remove()
 google.*##div[data-lpage*="virtulook.ai"]:remove()
 google.*##div[data-lpage*="learnmidjourney.ai"]:remove()
 google.*##div[data-lpage*="blackink.ai"]:remove()
@@ -150,7 +150,6 @@ google.*##div[data-lpage*="artiphoria.ai"]:remove()
 google.*##div[data-lpage*="stockimg.ai"]:remove()
 google.*##div[data-lpage*="airbrush.ai"]:remove()
 google.*##div[data-lpage*="arthemy.ai"]:remove()
-google.*##div[data-lpage*="arthub.ai"]:remove()
 google.*##div[data-lpage*="nsfwgenerator.ai"]:remove()
 google.*##div[data-lpage*="onlyrizz.ai"]:remove()
 google.*##div[data-lpage*="gofind.ai"]:remove()
@@ -172,7 +171,6 @@ google.*##div[data-lpage*="dreamup.ai"]:remove()
 google.*##div[data-lpage*="artbot.ai"]:remove()
 google.*##div[data-lpage*="portret.ai"]:remove()
 google.*##div[data-lpage*="iliad.ai"]:remove()
-google.*##div[data-lpage*="astria.ai"]:remove()
 google.*##div[data-lpage*="paxi.ai"]:remove()
 google.*##div[data-lpage*="diffusitron.ai"]:remove()
 google.*##div[data-lpage*="dalle3.ai"]:remove()
@@ -306,7 +304,6 @@ google.*##div[data-lpage*="everart.ai"]:remove()
 google.*##div[data-lpage*="undetectable.ai"]:remove()
 google.*##div[data-lpage*="facecam.ai"]:remove()
 
-
 ! Sites that have .com domain extension
 google.*##div[data-lpage*="anime-girl.com"]:remove()
 google.*##div[data-lpage*="hayo.com"]:remove()
@@ -353,7 +350,6 @@ google.*##div[data-lpage*="technolynx.com"]:remove()
 google.*##div[data-lpage*="segmind.com"]:remove()
 google.*##div[data-lpage*="sarahmeyohas.com"]:remove()
 google.*##div[data-lpage*="davidarielszauder.com"]:remove()
-google.*##div[data-lpage*="sarahmeyohas.com"]:remove()
 google.*##div[data-lpage*="violetforest.com"]:remove()
 google.*##div[data-lpage*="dreamup.com"]:remove()
 google.*##div[data-lpage*="artbreeder"]:remove()
@@ -382,10 +378,8 @@ google.*##div[data-lpage*="color-anything.com"]:remove()
 google.*##div[data-lpage*="blimeycreate.com"]:remove()
 google.*##div[data-lpage*="artreviewgenerator.com"]:remove()
 google.*##div[data-lpage*="kakobrain.com"]:remove()
-google.*##div[data-lpage*="yodayo.com"]:remove()
 google.*##div[data-lpage*="aidungeon.com"]:remove()
 google.*##div[data-lpage*="zazow.com"]:remove()
-google.*##div[data-lpage*="starryai.com"]:remove()
 google.*##div[data-lpage*="playarti.com"]:remove()
 google.*##div[data-lpage*="playgroundai.com"]:remove()
 google.*##div[data-lpage*="alkaidvision.com"]:remove()
@@ -421,7 +415,6 @@ google.*##div[data-lpage*="cliptics.com"]:remove()
 google.*##div[data-lpage*="thataicollection.com"]:remove()
 google.*##div[data-lpage*="augxlabs.com"]:remove()
 google.*##div[data-lpage*="askstockgpt.com"]:remove()
-google.*##div[data-lpage*="blimeycreate.com"]:remove()
 google.*##div[data-lpage*="kaedim3d.com"]:remove()
 google.*##div[data-lpage*="masterpiecestudio.com"]:remove()
 google.*##div[data-lpage*="shopdeft.com"]:remove()
@@ -545,7 +538,6 @@ google.*##div[data-lpage*="copilot.microsoft.com"]:remove()
 google.*##div[data-lpage*="copilot.github.com"]:remove()
 google.*##div[data-lpage*="pixabay.com"]:remove()
 
-
 ! Sites that have .art domain extension
 google.*##div[data-lpage*="imagine.art"]:remove()
 google.*##div[data-lpage*="jasper.art"]:remove()
@@ -646,7 +638,6 @@ google.*##div[data-lpage*="lunai.art"]:remove()
 google.*##div[data-lpage*="pictab.art"]:remove()
 google.*##div[data-lpage*="ubrand.com"]:remove()
 
-
 ! Sites that have .co domain extension
 google.*##div[data-lpage*="huggingface.co"]:remove()
 google.*##div[data-lpage*="clipdrop.co"]:remove()
@@ -664,7 +655,6 @@ google.*##div[data-lpage*="embolden.co"]:remove()
 google.*##div[data-lpage*="superreply.co"]:remove()
 google.*##div[data-lpage*="hiddendoor.co"]:remove()
 google.*##div[data-lpage*="aiartmaster.co"]:remove()
-
 
 ! Sites that have .net domain extension
 google.*##div[data-lpage*="illusiondiffusion.net"]:remove()
@@ -729,7 +719,6 @@ google.*##div[data-lpage*="make3d.app"]:remove()
 google.*##div[data-lpage*="petbooth.app"]:remove()
 google.*##div[data-lpage*="outfitanyone.app"]:remove()
 google.*##div[data-lpage*="wonderai.app"]:remove()
-google.*##div[data-lpage*="phraser.tech"]:remove()
 google.*##div[data-lpage*="aigur.dev"]:remove()
 google.*##div[data-lpage*="aiart.dev"]:remove()
 google.*##div[data-lpage*="background.lol"]:remove()
@@ -810,7 +799,6 @@ google.*##div[data-lpage*="liveportrait.org"]:remove()
 google.*##div[data-lpage*="liveportrait.app"]:remove()
 google.*##div[data-lpage*="live-portrait.vercel.app"]:remove()
 
-
 ! Google Play AI applications
 google.*##div[data-lpage*="play.google.*/store/apps/details?id=com.sola.anime.ai.generator"]:remove()
 google.*##div[data-lpage*="play.google.*/store/apps/details?id=com.vyroai.animeart"]:remove()
@@ -833,13 +821,10 @@ google.*##div[data-lpage*="play.google.*/store/apps/details?id=anime.wallpapers4
 google.*##div[data-lpage*="play.google.*/store/apps/details?id=com.ai.art.generator.avatar.creator.unique"]:remove()
 google.*##div[data-lpage*="play.google.*/store/apps/details?id=ai.art.generator.design"]:remove()
 google.*##div[data-lpage*="play.google.*/store/apps/details?id=com.tapuniverse.aiartgenerator"]:remove()
-google.*##div[data-lpage*="play.google.*/store/apps/details?id=com.vyroai.animeart"]:remove()
-
 
 ! Apple AI applications
 google.*##div[data-lpage*="apple.com/us/app/ai-art-generator-hitpaw/id6444304300"]:remove()
 google.*##div[data-lpage*="apple.com/us/app/pixai-ai-anime-art-generator/id6474528911"]:remove()
-
 
 ! Gross nudify sites/deepfakes/porn (why isn't this illegal?!?!)
 google.*##div[data-lpage*="sukebezone.com"]:remove()
@@ -919,7 +904,6 @@ google.*##div[data-lpage*="ai-dreamgirls.com"]:remove()
 google.*##div[data-lpage*="hentai.kitchen"]:remove()
 google.*##div[data-lpage*="getporn.ai"]:remove()
 google.*##div[data-lpage*="porn.ai"]:remove()
-google.*##div[data-lpage*="aigirlfriend.wtf"]:remove()
 google.*##div[data-lpage*="privee.ai"]:remove()
 google.*##div[data-lpage*="pornai.tv"]:remove()
 google.*##div[data-lpage*="nsfw.xxx"]:remove()
@@ -993,8 +977,6 @@ google.*##div[data-lpage*="braundress.net"]:remove()
 google.*##div[data-lpage*="ai-nudes.ai"]:remove()
 google.*##div[data-lpage*="undress.xxx"]:remove()
 google.*##div[data-lpage*="girlfriend.ai"]:remove()
-
-
 
 ! //// Block lists of individual users
 
@@ -1103,7 +1085,6 @@ google.*##div[data-lpage*="x.com/Feral_Forest/"]:remove()
 google.*##div[data-lpage*="twitter.com/watanaharumi/"]:remove()
 google.*##div[data-lpage*="x.com/watanaharumi/"]:remove()
 
-
 ! Block list of AI "artists"/orgs (youtube)
 google.*##div[data-lpage*="youtube.com/@shadiversity"]:remove()
 google.*##div[data-lpage*="youtube.com/channel/UCkmMACUKpQeIxN9D9ARli1Q"]:remove()
@@ -1114,7 +1095,6 @@ google.*##div[data-lpage*="youtube.com/@enigmatic_e"]:remove()
 google.*##div[data-lpage*="youtube.com/channel/UClSBolYONOzQjOzE4cMHfpw"]:remove()
 google.*##div[data-lpage*="youtube.com/@LaCarnevali"]:remove()
 google.*##div[data-lpage*="youtube.com/@OlivioSarikas"]:remove()
-
 
 ! Block list of AI "artists"/orgs (instagram)
 google.*##div[data-lpage*="instagram.com/_prateekarora"]:remove()
@@ -1159,7 +1139,6 @@ google.*##div[data-lpage*="instagram.com/oliviotutorials"]:remove()
 google.*##div[data-lpage*="instagram.com/hellocivitai"]:remove()
 google.*##div[data-lpage*="instagram.com/wand.official"]:remove()
 
-
 ! Block list of AI "artists"/orgs (pinterest)
 google.*##div[data-lpage*="pinterest.com/warking999999"]:remove()
 google.*##div[data-lpage*="pinterest.com/racingtff"]:remove()
@@ -1200,7 +1179,6 @@ google.*##div[data-lpage*="pinterest.com/tonnyfroyen"]:remove()
 google.*##div[data-lpage*="pinterest.com/rhiakai86"]:remove()
 google.*##div[data-lpage*="pinterest.com/hardikmd124"]:remove()
 google.*##div[data-lpage*="pinterest.com/WinterAIArt"]:remove()
-google.*##div[data-lpage*="pinterest.com/Aiartanime"]:remove()
 google.*##div[data-lpage*="pinterest.com/arabiclogos_com"]:remove()
 google.*##div[data-lpage*="pinterest.com/emmapreston93"]:remove()
 google.*##div[data-lpage*="pinterest.com/isabellakinape"]:remove()
@@ -1222,14 +1200,11 @@ google.*##div[data-lpage*="pinterest.com/kingvinst"]:remove()
 google.*##div[data-lpage*="pinterest.com/BellaBlues99"]:remove()
 google.*##div[data-lpage*="pinterest.com/fira1747"]:remove()
 
-
 ! Block list of AI "artists"/orgs (behance)
 google.*##div[data-lpage*="behance.net/oliviosarikas"]:remove()
 
-
 ! Block list of AI "artists"/orgs (ko-fi)
 google.*##div[data-lpage*="ko-fi.com/ainomad"]:remove()
-
 
 ! Block list of AI "artists"/orgs (deviantart)
 google.*##div[data-lpage*="deviantart.com/vyerran"]:remove()
@@ -1245,24 +1220,18 @@ google.*##div[data-lpage*="deviantart.com/jaredsyn"]:remove()
 google.*##div[data-lpage*="deviantart.com/instaai"]:remove()
 google.*##div[data-lpage*="deviantart.com/lizzyrascal"]:remove()
 
-
 ! Block list of AI "artists"/orgs (artstation)
 google.*##div[data-lpage*="artstation.com/tryintogetthere"]:remove()
 
-
 ! Block list of AI "artists"/orgs (facebook)
 google.*##div[data-lpage*="facebook.com/cuteanimegirl99"]:remove()
-google.*##div[data-lpage*="facebook.com/cuteanimegirl99"]:remove()
 google.*##div[data-lpage*="facebook.com/TheTiniestTiger"]:remove()
-
 
 ! Artstation shit
 google.*##div[data-lpage*="artstation.com/artwork/KOJ80W"]:remove()
 
-
 ! s.id garbage
 google.*##div[data-lpage*="s.id/AIArtGaia"]:remove()
-
 
 ! ko-fi garbage
 google.*##div[data-lpage*="ko-fi.com/s/cfcbe64e46"]:remove()
@@ -1271,7 +1240,6 @@ google.*##div[data-lpage*="ko-fi.com/s/12dd0f892e"]:remove()
 google.*##div[data-lpage*="ko-fi.com/s/26646f3ac9"]:remove()
 google.*##div[data-lpage*="ko-fi.com/s/af9a23d375"]:remove()
 
-
 ! Freepik garbage
 google.*##div[data-lpage*="freepik.com/premium-ai-image"]:remove()
 google.*##div[data-lpage*="freepik.com/premium-photo/santa-christmas-snowman-with-christmas-tree-background_34806921"]:remove()
@@ -1279,10 +1247,8 @@ google.*##div[data-lpage*="freepik.com/premium-photo/circus-tent-with-balloons-s
 google.*##div[data-lpage*="freepik.com/premium-photo/moon-background-with-astronaut-image-ai-generated-art_39726721.htm"]:remove()
 google.*##div[data-lpage*="freepik.com/author/smmstore773"]:remove()
 
-
 ! Linkedin garbage
 google.*##div[data-lpage*="linkedin.com/in/justmaier"]:remove()
-
 
 ! Medium garbage
 google.*##div[data-lpage*="medium.com/@inchristiely"]:remove()
@@ -1290,17 +1256,14 @@ google.*##div[data-lpage*="medium.com/@aitubo011"]:remove()
 google.*##div[data-lpage*="medium.com/mlearning-ai"]:remove()
 google.*##div[data-lpage*="medium.com/generative-ai"]:remove()
 
-
 ! // Miscellaneous crypto/nft shit
 google.*##div[data-lpage*="cryptoart.io"]:remove()
 google.*##div[data-lpage*="opensea.io"]:remove()
 google.*##div[data-lpage*="datadriveninvestor.com"]:remove()
 
-
 ! // Etsy shit
 google.*##div[data-lpage*="etsy.com/listing/1458059429"]:remove()
 google.*##div[data-lpage*="etsy.com/listing/1368236844"]:remove()
-
 
 ! // Individual Pinterest shit
 google.*##div[data-lpage*="pinterest.com/pin/428053139600411583"]:remove()
@@ -1321,14 +1284,11 @@ google.*##div[data-lpage*="adobe.com/uk/products/firefly"]:remove()
 google.*##div[data-lpage*="stock.adobe.com/images/abstract-painting-about-anime-girl-with-close-up-view-at-the-face-splash-colour-art-portrait-of-anime-girl-digital-art-style-illustration-painting-generative-ai/569091927"]:remove()
 google.*##div[data-lpage*="stock.adobe.com/images/abstract-painting-about-anime-girl-with-close-up-view-at-the-face-splash-colour-art-portrait-of-anime-girl-digital-art-style-illustration-painting-generative-ai/569091986"]:remove()
 
-
 ! // Individual Artstation shit
 google.*##div[data-lpage*="artstation.com/artwork/kQZoLA"]:remove()
 
-
 ! // Fiverr shit
 google.*##div[data-lpage*="fiverr.com/bleassome"]:remove()
-
 
 ! //// Block list of AI subreddits
 google.*##div[data-lpage*="reddit.com/r/StableDiffusion"]:remove()
@@ -1397,24 +1357,19 @@ google.*##div[data-lpage*="reddit.com/r/SunoAI"]:remove()
 google.*##div[data-lpage*="reddit.com/r/bigsleep"]:remove()
 google.*##div[data-lpage*="reddit.com/r/promptsideas"]:remove()
 
-
 ! // Block list of AI reddit users
 google.*##div[data-lpage*="reddit.com/user/aidaily0"]:remove()
 google.*##div[data-lpage*="reddit.com/user/Wyprany"]:remove()
 google.*##div[data-lpage*="reddit.com/user/AIContent"]:remove()
 
-
 ! // Reddit shit (placeholder)
-
 
 ! // Tumblr shit
 google.*##div[data-lpage*="dalle2.tumblr.com"]:remove()
 
-
 ! // Pixels
 google.*##div[data-lpage*="pixels.com/featured/beautiful-chinese-dragon-lmzkone-narciso-marlene"]:remove()
 google.*##div[data-lpage*="pixels.com/profiles/lm2kone"]:remove()
-
 
 ! // Amazon shit
 google.*##div[data-lpage*="amazon.com/Cute-Anime-Girls-Fantasy-Inspired-Characters/dp/B0C47SW6NT"]:remove()
@@ -1424,7 +1379,6 @@ google.*##div[data-lpage*="amazon.com/Squirrel-Coloring-Book-Squirrels-Lovers/dp
 google.*##div[data-lpage*="amazon.com/Rabbit-Coloring-Book-Rabbits-Lovers/dp/B0CV43GKGZ"]:remove()
 google.*##div[data-lpage*="amazon.com/Cat-Coloring-Book-Cats-Windows/dp/B0CVLFSSGC"]:remove()
 google.*##div[data-lpage*="amazon.com/Kawaii-Sketchbook-drawing-notebook-journal/dp/B0C9S8W4PW"]:remove()
-
 google.*##div[data-lpage*="amazon.com/Anime-Coloring-Book-Drawing-Enthusiasts/dp/B0C8R9DD5J"]:remove()
 google.*##div[data-lpage*="amazon.com/Anime-Coloring-Book-Chibi-Kawaii/dp/B0CZP35QWQ"]:remove()
 google.*##div[data-lpage*="amazon.com/Anime-Coloring-Book-Enthusiasts-Stress/dp/B0C79NPRKT"]:remove()
@@ -1434,7 +1388,6 @@ google.*##div[data-lpage*="amazon.com/Anime-Coloring-Book-Zodiac-Enthusiasts/dp/
 google.*##div[data-lpage*="amazon.com/Anime-Coloring-Book-Flower-Enthusiasts/dp/B0CCCMZXQG"]:remove()
 google.*##div[data-lpage*="amazon.com/Anime-Coloring-Book-Manhua-Enthusiasts/dp/B0CMCKC5GM"]:remove()
 google.*##div[data-lpage*="amazon.com/stores/Aeryn-Zen/author/B0C7NL912Q"]:remove()
-
 
 ! // AI content farms/spam
 google.*##div[data-lpage*="boddeswasusi.github.io"]:remove()
@@ -1451,10 +1404,8 @@ google.*##div[data-lpage*="samurai-gamers.com"]:remove()
 google.*##div[data-lpage*="zleague.gg"]:remove()
 google.*##div[data-lpage*="dinosaur.org"]:remove()
 
-
 ! // VoiceMod shit
 google.*##div[data-lpage*="tuna.voicemod.net/sound/1fdc3b37-441c-4a34-ae88-853bbbb947bb"]:remove()
-
 
 ! // Getty Wallpapers
 google.*##div[data-lpage*="gettywallpapers.com/cute-anime-girl-profile-pictures"]:remove()
@@ -1462,3 +1413,37 @@ google.*##div[data-lpage*="gettywallpapers.com/cute-anime-girl-profile-pictures"
 ! // Just in case exceptions
 mail.google.com#@#a[data-lpage*="/play.ht"]:remove()
 mail.google.com#@#a[data-lpage*=".play.ht"]:remove()
+
+! // Extras from Shockwave3301/uBlacklistAIList
+google.*##div[data-lpage*="123rf.com"]:remove()
+google.*##div[data-lpage*="acrylic.typedream.app"]:remove()
+google.*##div[data-lpage*="adobe.com/products/firefly.html"]:remove()
+google.*##div[data-lpage*="aipicasso.studio.site"]:remove()
+google.*##div[data-lpage*="artmajeur.com"]:remove()
+google.*##div[data-lpage*="artpal.com"]:remove()
+google.*##div[data-lpage*="bdiscover.kakobrain.com"]:remove()
+google.*##div[data-lpage*="beta.dreamstudio.ai"]:remove()
+google.*##div[data-lpage*="canva.com/ai-art-generator"]:remove()
+google.*##div[data-lpage*="cloe.bytebeacon.com/@bb_ras"]:remove()
+google.*##div[data-lpage*="creativefabrica.com"]:remove()
+google.*##div[data-lpage*="depositphotos.com"]:remove()
+google.*##div[data-lpage*="dreamstime.com"]:remove()
+google.*##div[data-lpage*="freepik.com"]:remove()
+google.*##div[data-lpage*="giotto.streamlit.app"]:remove()
+google.*##div[data-lpage*="idesigns.shop"]:remove()
+google.*##div[data-lpage*="kittl.com"]:remove()
+google.*##div[data-lpage*="lori.ru"]:remove()
+google.*##div[data-lpage*="peakpx.com"]:remove()
+google.*##div[data-lpage*="picsart.com/ai-image-generator"]:remove()
+google.*##div[data-lpage*="pixers.com"]:remove()
+google.*##div[data-lpage*="pixers.de"]:remove()
+google.*##div[data-lpage*="play.ht"]:remove()
+google.*##div[data-lpage*="pngtree.com"]:remove()
+google.*##div[data-lpage*="publish0x.com"]:remove()
+google.*##div[data-lpage*="search.krea.ai"]:remove()
+google.*##div[data-lpage*="sketch.metamolab.com"]:remove()
+google.*##div[data-lpage*="softonic.com"]:remove()
+google.*##div[data-lpage*="timesnownews.com"]:remove()
+google.*##div[data-lpage*="udio.com"]:remove()
+google.*##div[data-lpage*="vecteezy.com"]:remove()
+google.*##div[data-lpage*="vidnoz.com"]:remove()
