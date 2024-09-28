@@ -644,6 +644,7 @@ google.*##div[data-lpage*="assetsai.art"]:remove()
 google.*##div[data-lpage*="liblib.art"]:remove()
 google.*##div[data-lpage*="lunai.art"]:remove()
 google.*##div[data-lpage*="pictab.art"]:remove()
+google.*##div[data-lpage*="ubrand.com"]:remove()
 
 
 ! Sites that have .co domain extension
@@ -679,6 +680,7 @@ google.*##div[data-lpage*="miramuseai.net"]:remove()
 google.*##div[data-lpage*="aichatting.net"]:remove()
 google.*##div[data-lpage*="melodystudio.net"]:remove()
 google.*##div[data-lpage*="trycatchdebug.net"]:remove()
+google.*##div[data-lpage*="codeease.net"]:remove()
 
 ! Sites that have miscellaneous domain extensions (eg. .pub, io, etc.)
 google.*##div[data-lpage*="aitree.io"]:remove()
@@ -798,11 +800,15 @@ google.*##div[data-lpage*="veed.io"]:remove()
 google.*##div[data-lpage*="visla.us"]:remove()
 google.*##div[data-lpage*="conoha.jp/ai/canvas"]:remove()
 google.*##div[data-lpage*="animeart.studio"]:remove()
+google.*##div[data-lpage*="fluxai.studio"]:remove()
 google.*##div[data-lpage*="domoai.app"]:remove()
 google.*##div[data-lpage*="aimojo.io"]:remove()
 google.*##div[data-lpage*="aimakerslab.io"]:remove()
 google.*##div[data-lpage*="promeai.pro"]:remove()
 google.*##div[data-lpage*="stablediffusion.fr"]:remove()
+google.*##div[data-lpage*="liveportrait.org"]:remove()
+google.*##div[data-lpage*="liveportrait.app"]:remove()
+google.*##div[data-lpage*="live-portrait.vercel.app"]:remove()
 
 
 ! Google Play AI applications
@@ -1432,6 +1438,7 @@ google.*##div[data-lpage*="amazon.com/stores/Aeryn-Zen/author/B0C7NL912Q"]:remov
 
 ! // AI content farms/spam
 google.*##div[data-lpage*="boddeswasusi.github.io"]:remove()
+google.*##div[data-lpage*="linuxcapable.com"]:remove()
 google.*##div[data-lpage*="stl24.com"]:remove()
 google.*##div[data-lpage*="outsourceit.today"]:remove()
 google.*##div[data-lpage*="metaroids.com"]:remove()
