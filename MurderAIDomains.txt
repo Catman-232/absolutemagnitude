@@ -303,6 +303,7 @@ google.*##div[data-lpage*="pipio.ai"]:remove()
 google.*##div[data-lpage*="everart.ai"]:remove()
 google.*##div[data-lpage*="undetectable.ai"]:remove()
 google.*##div[data-lpage*="facecam.ai"]:remove()
+google.*##div[data-lpage*="filmport.ai"]:remove()
 
 ! Sites that have .com domain extension
 google.*##div[data-lpage*="anime-girl.com"]:remove()
